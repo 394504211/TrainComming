@@ -19,5 +19,6 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/ivImg"
         android:layout_marginTop="2dp"
+        android:layout_marginStart="6dp"
         android:textColor="@color/greyText" />
 </RelativeLayout>

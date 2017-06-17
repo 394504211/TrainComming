@@ -1,38 +1,43 @@
 package presenter;
 
-import bean.BaseBean;
-import model.IReviewListModel;
-import model.impl.ReviewListModelImpl;
+import bean.BaseResponse;
+import model.ITripModel;
+import model.impl.TripModelImpl;
 import util.CompleteListener;
-import view.IBaseView;
-
+import view.activity.ITripView;
 
 
 public class TripViewPreImpl implements ITripViewPresenter, CompleteListener {
-    IBaseView iBaseView;
-    IReviewListModel iReviewListModel;
+    ITripView iTripView;
+    ITripModel iTripModel;
 
-    public TripViewPreImpl(IBaseView iBaseView){
-        this.iBaseView=iBaseView;
-        iReviewListModel=new ReviewListModelImpl();
+    public TripViewPreImpl(ITripView iTripView){
+        this.iTripView=iTripView;
+        iTripModel=new TripModelImpl();
     }
     @Override
-    public void onComplected(Object result) {
-        iBaseView.showDate(result);
+    public void onCompleted(Object result) {
+        iTripView.showDate(result);
     }
 
-    @Override
-    public void onFailed(BaseBean msg) {
-
-    }
 
     @Override
-    public void loadTimeInfo(String trainId, String trainStation) {
-
+    public void onFailed(BaseResponse msg) {
+        iTripView.loadFail(msg.getMsg());
     }
 
     @Override
-    public void loadReviews(String tarinId) {
+    public void loadArriveInfo(String trainId, String from, String to, String date) {
+        iTripModel.loadArriveInfo(trainId, from, to, date, this);
+    }
 
+    @Override
+    public void loadReviews(String trainId,String start,boolean isRefresh) {
+        iTripModel.loadReviewList(trainId,start ,this);
+    }
+
+    @Override
+    public void addReview(String trainId, String userId, String content, String moreContent) {
+        iTripModel.addReview(trainId,userId,content,moreContent,this);
     }
 }

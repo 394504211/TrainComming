@@ -4,14 +4,14 @@ package bean;
 /**
  * Created by xlf on 2017/5/10.
  */
-public class BaseBean {
+public class BaseResponse {
     private int code;
     private String msg;
 
-    public BaseBean() {
+    public BaseResponse() {
     }
 
-    public BaseBean(int code, String msg) {
+    public BaseResponse(int code, String msg) {
         this.code = code;
         this.msg = msg;
     }

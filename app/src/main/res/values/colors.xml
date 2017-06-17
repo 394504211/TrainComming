@@ -4,10 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="greyText">#8f8f8f</color>
+    <color name="greyDark">#666666</color>
     <color name="beckWhite">#ffffff</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="skyBlue">#2894ff</color>
+    <color name="backGray">#e8e8d0</color>
+    <color name="greyFont">#9f9f8a</color>
     <color name="backgrey">#e8e8d0</color>
     <color name="fontgrey">#9f9f8a</color>
+    <color name="whitesmoke">#EDEDED</color>
+    <color name="iceblue">#6495ED</color>
+    <color name="red">#EE5C42</color>
 </resources>

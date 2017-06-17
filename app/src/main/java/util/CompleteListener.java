@@ -1,12 +1,11 @@
 package util;
 
-import bean.BaseBean;
+import bean.BaseResponse;
 
 /**
  * Created by xlf on 2017/5/10.
  */
 public interface CompleteListener {
-    void onComplected(Object result);
-
-    void onFailed(BaseBean msg);
+    void onCompleted(Object result);
+    void onFailed(BaseResponse msg);
 }

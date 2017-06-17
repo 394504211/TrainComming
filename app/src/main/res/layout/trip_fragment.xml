@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/beckWhite"
+        android:background="@color/whitesmoke"
         android:clipToPadding="false"
         android:fitsSystemWindows="true"
         android:orientation="vertical">
@@ -15,158 +16,282 @@
         <RelativeLayout
             android:id="@+id/rl_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:background="@color/skyBlue">
-
-
-            <TextView
-                android:id="@+id/tv_triptitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="6dp"
-                android:padding="8dp"
-                android:text="@string/lvtu"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
+            >
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:canLoop="true"
+            />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@drawable/linerlayout"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/corners_bg"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_trip_trainId"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TrainId"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/tv_trip_from"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="出发地"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="距火车到站还有:"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/tv_trip_to"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="目的地"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_time_left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="15时15分"
-                android:textColor="@color/black"
-                android:textSize="32sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/linerlayout"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="预计到达时间:"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
-
-            <TextView
-                android:id="@+id/tv_arrive_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="15时15分"
-                android:textColor="@color/black"
-                android:textSize="32sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/linerlayout"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="设置提醒闹钟:"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
-
-            <Switch
-                android:id="@+id/switch_ring"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="闹钟开关" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/linerlayout"
-            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="删除旅途"
+                    android:text="距到达还有:"
+                    android:layout_marginStart="15dp"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
 
-
+                <cn.iwgang.countdownview.CountdownView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cv_countdownViewTest1"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    app:isHideTimeBackground="false"
+                    app:isShowDay="true"
+                    app:isShowHour="true"
+                    app:isShowMinute="true"
+                    app:isShowSecond="false"
+                    app:isShowMillisecond="false"
+                    app:timeTextColor="#000000"
+                    app:timeTextSize="25sp"
+                    app:isTimeTextBold="true"
+                    app:suffixGravity="bottom"
+                    app:suffixTextColor="#000000"
+                    app:suffixTextSize="12sp"
+                    app:suffixDay="天"
+                    app:suffixHour="时"
+                    app:suffixMinute="分"
+                    app:suffixSecond="秒"
+                    app:timeBgColor="@color/beckWhite"
+                    app:timeBgSize="10dp"
+                    app:timeBgRadius="13dp"
+                    />
             </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:paddingLeft="1dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="添加新旅途"
+                    android:text="预计到达时间:"
+                    android:layout_marginStart="15dp"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_trip_arriveTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="15：15"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="当前站"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/tv_trip_curStation"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="当前站"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="下一站"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/tv_trip_nextStation"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="下一站"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="设置提醒闹钟:"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/dateButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_style"
+                            android:textColor="@color/beckWhite"
+                            android:textSize="18sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="left|center_vertical"
+                            android:text="@string/xuanzeriqi" />
+
+                        <Button
+                            android:id="@+id/timeButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_style"
+                            android:textColor="@color/beckWhite"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:text="@string/xuanzeshijian" />
+
+                    </FrameLayout>
+
+
+                </RelativeLayout>
 
 
             </LinearLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/greyText"
+                android:layout_marginTop="5dip" />
+
+
         </LinearLayout>
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:padding="10dp">
-
-
-            <lib.Jerrychart.JerryChartView
-                android:id="@+id/jcv"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:chartStyle="ANNULAR"
-                app:lineColor="@color/white"
-                app:lineWidth="2dp"
-                app:startAngle="-90" />
 
 
             <LinearLayout
@@ -200,22 +325,51 @@
                     />
             </LinearLayout>
 
+            <lib.Jerrychart.JerryChartView
+                android:id="@+id/jcv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:chartStyle="ANNULAR"
+                app:lineColor="@color/white"
+                app:lineWidth="2dp"
+                app:startAngle="-90" />
+
 
         </LinearLayout>
-
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_refresh"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/ry_details"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            >
+            android:layout_height="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评论"
+                android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_comment"
+                android:layout_toStartOf="@+id/tv_trip_addReview" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_trip_addReview"
+                android:text="发表评论"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ry_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                >
 
-        </android.support.v7.widget.RecyclerView>
-        </android.support.v4.widget.SwipeRefreshLayout>
+            </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </ScrollView>

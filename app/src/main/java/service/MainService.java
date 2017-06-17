@@ -9,12 +9,14 @@ import android.os.IBinder;
 /**
  * Created by Administrator on 2017/1/25.
  */
-public class MainService extends Service {
+public class MainService extends Service{
 
-    private Handler handler=new Handler();
+    private Handler handler = new Handler();
 
     @Override
     public IBinder onBind(Intent intent) {
         return null;
     }
+
+
 }

@@ -1,11 +1,9 @@
 package multitype.viewItem;
 
-import bean.BaseBean;
-
 /**
  * Created by Administrator on 2017/4/9.
  */
-public class FindNewsItem extends BaseBean{
+public class FindNewsItem implements Item {
     private String Title;
     private String Url;
     private String date;

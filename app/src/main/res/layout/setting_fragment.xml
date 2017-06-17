@@ -25,7 +25,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="6dp"
             android:padding="8dp"
-            android:text="@string/faxian"
+            android:text="@string/shezhi"
             android:textSize="30sp"
             android:textColor="@color/white"/>
 
@@ -42,11 +42,12 @@
             android:layout_height="200dp"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/back_blue_purple"/>
+            android:background="@drawable/beijing"/>
+
 
         <lib.CircleImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_centerInParent="true"
             android:src="@drawable/touxiang"
             app:border_width="2dp"
@@ -54,7 +55,150 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/whitesmoke">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layer_list"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/rl_set_info">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dayu"
+                        android:textSize="28sp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="right"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/personal_info"
+                        android:textSize="28sp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/textView" />
+
+                </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layer_list"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rl_set_check"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_version"
+                    android:layout_marginStart="10dp"
+                    android:textSize="28sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dayu"
+                    android:textSize="28sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="right"
+                    />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layer_list"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/rl_set_about">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:textSize="28sp"
+                    android:layout_marginStart="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dayu"
+                    android:textSize="28sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="right"
+                    />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layer_list"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:id="@+id/rl_set_feedback">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/advice"
+                    android:textSize="28sp"
+                    android:layout_marginStart="10dp"
+                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dayu"
+                    android:textSize="28sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="right"
+                    />
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -35,13 +35,13 @@ public abstract class BaseFragment extends Fragment {
         View view = LayoutInflater.from(mActivity)
                 .inflate(getLayoutId(), container, false);
         initView(view, savedInstanceState);
-
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        initEvent();
         initData();
     }
 
@@ -62,4 +62,10 @@ public abstract class BaseFragment extends Fragment {
      * 执行数据的加载
      */
     protected abstract void initData();
+
+    protected void initEvent() {
+    }
+    protected Activity getmActivity(){
+        return this.mActivity;
+    }
 }

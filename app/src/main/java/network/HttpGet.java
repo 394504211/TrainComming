@@ -13,6 +13,7 @@ import java.net.URL;
 public class HttpGet implements Runnable {
 
     String urlStr;
+    boolean completed=false;
     String result="";
     public HttpGet(String url){
         this.urlStr=url;
@@ -22,22 +23,30 @@ public class HttpGet implements Runnable {
         return result;
     }
 
+    public boolean getCompelted() {
+        return completed;
+    }
+
     @Override
     public void run() {
+        completed=false;
         HttpURLConnection conn;
         try {
             URL url =new URL(urlStr);
             conn = (HttpURLConnection)url.openConnection();
+            conn.setConnectTimeout(30000);
+            conn.setReadTimeout(30000);
             conn.setRequestMethod("GET");
             int code=conn.getResponseCode();
             if(code==200){
                 InputStream is = conn.getInputStream(); // 字节流转换成字符串
-                BufferedReader reader=new BufferedReader(new InputStreamReader(is,"gb2312"));
+                BufferedReader reader=new BufferedReader(new InputStreamReader(is,"utf-8"));
                 String buffer;
                 while((buffer=reader.readLine())!=null){
                     result=result+"\n"+buffer;
                 }
                 result=new String(result.getBytes(),"utf-8");
+                completed=true;
                 is.close();
             }
         } catch (IOException e) {

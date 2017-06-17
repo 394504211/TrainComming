@@ -26,6 +26,7 @@ import multitype.viewItem.ReviewItem;
  * Created by Administrator on 2017/4/8.
  */
 public class ReviewItemBinder extends ItemViewProvider<ReviewItem, ReviewItemBinder.TrainReviewHolder> {
+    @NonNull
     protected TrainReviewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_train_review, parent, false);
         return new TrainReviewHolder(view, new ViewHolderOnClick() {

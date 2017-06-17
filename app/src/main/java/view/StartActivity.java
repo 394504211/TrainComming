@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.androidtest.traincomming.R;
 
-import db.TabDb;
+import view.db.TabDb;
 
 
 public class StartActivity extends FragmentActivity
@@ -40,6 +40,7 @@ public class StartActivity extends FragmentActivity
             TabHost.TabSpec tabSpec=tabHost.newTabSpec(tabs[i]).setIndicator(getTabView(i));
             tabHost.addTab(tabSpec,TabDb.getFragments()[i],null);
             tabHost.setTag(i);
+            System.out.println(tabSpec.getTag()+"spc tag"+tabHost.getTag()+"hosttag"+tabHost.getId()+"hostid");
         }
     }
     private View getTabView(int idx){

@@ -1,14 +1,13 @@
 package multitype.viewItem;
 
 
-import bean.BaseBean;
 import bean.UserBean;
 import bean.UserRatingBean;
 
 /**
  * Created by Administrator on 2017/4/8.
  */
-public class ReviewItem extends BaseBean {
+public class ReviewItem implements Item {
     private UserBean author;
     private int likes;
     private String content;

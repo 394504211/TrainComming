@@ -2,20 +2,22 @@ package bean;
 
 import java.io.Serializable;
 
+import multitype.viewItem.Item;
+
 /**
  * Created by Administrator on 2017/4/8.
  */
-public class UserBean implements Serializable {
-    private String id;
+public class UserBean extends BaseResponse implements Serializable {
+    private int id;
     private String name;
     private String avatar;
     private String large_avatar;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

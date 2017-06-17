@@ -7,12 +7,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/corners_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="6.94" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,10 +27,12 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:gravity="right"
+                    android:layout_marginStart="100dp"
+                    android:gravity="end"
                     android:hint="@string/checi"
-                    android:paddingTop="40dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:background="@null"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
             </LinearLayout>
@@ -45,10 +45,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:hint="@string/chufadi"
-                    android:paddingTop="40dp"
+                    android:paddingTop="45dp"
+                    android:paddingRight="30dp"
+                    android:background="@null"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
             </LinearLayout>
@@ -61,19 +62,16 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:hint="@string/riqi"
-                    android:paddingTop="40dp"
+                    android:paddingTop="50dp"
+
+                    android:background="@null"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="6.43" />
     </LinearLayout>
 
     <Button

@@ -38,15 +38,11 @@ public class QueryFragment extends Fragment {
     }
 
     private void initData() {
-        ImageView iv_left = (ImageView) view.findViewById(R.id.iv_left);
-        TextView tv_right = (TextView) view.findViewById(R.id.tv_right);
         Button btn_nhave = (Button) view.findViewById(R.id.btn_nhave);
         Button btn_have = (Button) view.findViewById(R.id.btn_have);
         ll_background=(LinearLayout) view.findViewById(R.id.ll_background) ;
         btn_nhave.setOnClickListener(onClicker);
         btn_have.setOnClickListener(onClicker);
-        iv_left.setOnClickListener(onClicker);
-        tv_right.setOnClickListener(onClicker);
         loadFragment(NOTHAVE_FRAGMENT);
     }
 
@@ -117,8 +113,6 @@ public class QueryFragment extends Fragment {
                 case R.id.btn_nhave:
                     ll_background.setBackgroundResource(R.mipmap.tab_nhave_03);
                     switchFragment(NOTHAVE_FRAGMENT);
-                    break;
-                case R.id.iv_left:
                     break;
             }
         }

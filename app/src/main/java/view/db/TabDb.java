@@ -1,4 +1,4 @@
-package db;
+package view.db;
 
 
 import com.androidtest.traincomming.R;
@@ -6,7 +6,7 @@ import com.androidtest.traincomming.R;
 import view.fragment.FindFragment;
 import view.fragment.QueryFragment;
 import view.fragment.SetFragment;
-import view.fragment.TripFragment;
+import view.fragment.TripListFragment;
 
 /**
  * Created by Administrator on 2016/12/15.
@@ -25,7 +25,7 @@ public class TabDb {
         return ids;
     }
     public static Class[] getFragments(){
-        Class[] clz={QueryFragment.class,TripFragment.class, FindFragment.class, SetFragment.class};
+        Class[] clz={QueryFragment.class, TripListFragment.class, FindFragment.class, SetFragment.class};
         return clz;
     }
 }
